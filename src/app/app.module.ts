@@ -3,10 +3,12 @@ import { NgModule, SystemJsNgModuleLoader } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LazyComponentComponent } from './shared/lazy-component/lazy-component.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LazyComponentComponent
   ],
   imports: [
     BrowserModule,
