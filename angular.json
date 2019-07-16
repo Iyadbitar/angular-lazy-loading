@@ -30,7 +30,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "lazyModules": [
+              "./src/app/text-field/text-field.module"
+            ]
           },
           "configurations": {
             "production": {
