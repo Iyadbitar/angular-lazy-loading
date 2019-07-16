@@ -32,7 +32,8 @@
             ],
             "scripts": [],
             "lazyModules": [
-              "./src/app/text-field/text-field.module"
+              "./src/app/text-field/text-field.module",
+              "./src/app/checkbox-field/checkbox-field.module"
             ]
           },
           "configurations": {
