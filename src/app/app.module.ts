@@ -4,6 +4,7 @@ import { NgModule, SystemJsNgModuleLoader } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LazyComponentComponent } from './shared/lazy-component/lazy-component.component';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { LazyComponentComponent } from './shared/lazy-component/lazy-component.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServicesModule.forRoot(),
   ],
   providers: [SystemJsNgModuleLoader],
   bootstrap: [AppComponent]

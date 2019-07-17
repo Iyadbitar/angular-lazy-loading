@@ -1,4 +1,6 @@
-import { Component, OnInit, SystemJsNgModuleLoader, Injector, ViewContainerRef, NgModuleFactory } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { ConfigService } from './services/config.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +9,11 @@ import { Component, OnInit, SystemJsNgModuleLoader, Injector, ViewContainerRef, 
 })
 export class AppComponent implements OnInit {
   title = 'ng-lazy-loading';
+  configuration$: Observable<any>;
+
+  constructor(private config: ConfigService) {}
 
   ngOnInit() {
+    this.configuration$ = this.config.getConfig();
   }
 }
