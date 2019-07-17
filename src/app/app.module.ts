@@ -7,6 +7,8 @@ import { LazyComponentComponent } from './shared/lazy-component/lazy-component.c
 import { ServicesModule } from './services/services.module';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { reducers } from './reducers';
         strictActionImmutability: true
       }
     }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [SystemJsNgModuleLoader],
   bootstrap: [AppComponent]
