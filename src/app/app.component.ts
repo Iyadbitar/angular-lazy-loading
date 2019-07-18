@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
 import { ConfigService } from './services/config.service';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, config } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { setDataModel } from './actions';
 import { State } from './reducers';

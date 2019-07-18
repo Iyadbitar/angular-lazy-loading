@@ -9,6 +9,7 @@ export class LazyComponentComponent implements OnInit {
 
   @Input() moduleUrl: string;
   @Input() component: string;
+  @Input() componentInput: string = '{}';
 
   constructor(
     private loader: SystemJsNgModuleLoader,
@@ -22,7 +23,8 @@ export class LazyComponentComponent implements OnInit {
         const moduleRef = moduleFactory.create(this.injector)
         const component = (<any>moduleFactory.moduleType)[this.component];
         const componentFactory = moduleRef.componentFactoryResolver.resolveComponentFactory(component);
-        this.vcRef.createComponent(componentFactory)
+        let compRef = this.vcRef.createComponent(componentFactory);
+        Object.assign(compRef.instance, this.componentInput);
       })
   }
 

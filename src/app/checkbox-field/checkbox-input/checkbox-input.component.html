@@ -1,7 +1,7 @@
-<h2>Checkbox Input</h2>
+<h2>{{label}}</h2>
 <div>
   <label>
-    <input type="checkbox" />
+    <input type="checkbox" [checked]="binding$ | async" />
     Checkbox label
   </label>
 </div>

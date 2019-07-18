@@ -10,6 +10,7 @@
     <app-lazy-component
       moduleUrl="{{config.type === 'textfield' ? './src/app/text-field/text-field.module'  : './src/app/checkbox-field/checkbox-field.module'}}"
       component="entry"
+      [componentInput]="{dataModelRef: config.dataModelRef, label: config.label}"
     ></app-lazy-component>
   </div>
 </div>
