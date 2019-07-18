@@ -1,11 +1,30 @@
-.grid {
+$red: #DD0130;
+
+
+.layout {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
+.grid {
+  border: 1px solid $red;
+  border-right: 0;
+
+  &:last-of-type {
+    border-right: 1px solid $red;
+  }
+}
+
 .box {
-  border: 1px solid #f00;
+  border-bottom: 1px solid $red ;
   padding: 1rem;
-  width: 33%;
-  height: 400px;
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.values {
+  padding: 1rem;
 }
