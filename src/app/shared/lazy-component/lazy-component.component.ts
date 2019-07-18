@@ -9,7 +9,7 @@ export class LazyComponentComponent implements OnInit {
 
   @Input() moduleUrl: string;
   @Input() component: string;
-  @Input() componentInput: string = '{}';
+  @Input() componentInput: object = {};
 
   constructor(
     private loader: SystemJsNgModuleLoader,
