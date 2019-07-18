@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LazyComponentComponent } from './shared/lazy-component/lazy-component.component';
 import { ServicesModule } from './services/services.module';
 import { StoreModule } from '@ngrx/store';
-import { reducers } from './reducers';
+import { reducer } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 
@@ -19,7 +19,7 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     ServicesModule.forRoot(),
-    StoreModule.forRoot(reducers, {
+    StoreModule.forRoot({data: reducer}, {
       runtimeChecks: {
         strictStateImmutability: true,
         strictActionImmutability: true

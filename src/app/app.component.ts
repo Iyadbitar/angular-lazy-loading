@@ -3,6 +3,7 @@ import { ConfigService } from './services/config.service';
 import { Observable, Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { setDataModel } from './actions';
+import { State } from './reducers';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit, OnDestroy {
   configuration$: Observable<any>;
   dataSubscription: Subscription;
 
-  constructor(private config: ConfigService, private store: Store) {}
+  constructor(private config: ConfigService, private store: Store<State>) {}
 
   ngOnInit() {
     this.dataSubscription = this.config.getData().subscribe((data) => {
